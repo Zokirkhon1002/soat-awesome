@@ -47,7 +47,7 @@ html.dark .center-point::after {
     border-radius: 5px;
     padding: 10px 16px;
     position: absolute;
-    top: 50px;
+    top: 70px;
 }
 .toggle:focus {
     outline: none;
