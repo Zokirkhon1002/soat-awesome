@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --oq: #ffffff;
+    --qora: #000;
+}
+
+html {
+    transition: 0.5s ease;
+}
+html.dark{
+    background-color: var(--qora);
+    color: var(--oq);
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+html.dark .toggle, html.dark .need.minute, html.dark .need.hour, html.dark .circle {
+    background-color: var(--oq);
+    color: var(--qora);
+}
+html.dark .center-point::after {
+    content: "";
+    background-color: var(--oq);
+    width: 6px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+.toggle {
+    cursor: pointer;
+    background-color: var(--qora);
+    color: var(--oq);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    position: absolute;
+    top: 50px;
+}
+.toggle:focus {
+    outline: none;
+}
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.need {
+    background-color: var(--qora);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s ease;
+}
+.need.hour {
+    transform: translate(-40% 100%);
+}
+.need.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+}
+.need.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: #e74c3c;
+}
+.center-point {
+    background-color: #e74c3c;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.center-point::after {
+    content: "";
+    background-color: var(--qora);
+    width: 6px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+.time {
+    font-size: 60px;
+}
+.date {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+.circle {
+    background-color: var(--qora);
+    color: var(--oq);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.5s ease;
+    font-size: 12px;
+}
